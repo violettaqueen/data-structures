@@ -3,10 +3,12 @@ import java.util.ArrayList;
 public class BigOSingleLoop {
     public static void main(String[] args) {
         long numberOfOperations=0;
-        int n=1000000;// size of  Data
+        int n=1000;// size of  Data
+        int m=500;
         long startTime;
         long endTime;
         System.out.println("Input size n is = "+ n);
+
         // Task 1 Single Loop................... O(n)
         startTime=System.currentTimeMillis();
         for (int i = 0; i < n ; i++) {
@@ -14,7 +16,7 @@ public class BigOSingleLoop {
         }
         endTime=System.currentTimeMillis();
 
-        System.out.println( "Number of operations: "+numberOfOperations + " in "+ (endTime-startTime) +" milliseconds");
+        System.out.println( "Single Loop Number of operations : "+numberOfOperations + " in "+ (endTime-startTime) +" milliseconds");
 
         numberOfOperations=0;
         // Task 2 Nested Loops...................
@@ -26,15 +28,53 @@ public class BigOSingleLoop {
         }
         endTime=System.currentTimeMillis();
 
-        System.out.println( "Number of operations with nested loop : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
+        System.out.println( "Nested Loop Number of operations : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
         // Task 2 End...................
 // ......................................................................................................
         // Task 3 Three Nested Loops...................
+        numberOfOperations=0;
+        // Task 3 Triple Nested Loops...................
+        startTime=System.currentTimeMillis();
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < n ; i++) {
+                for (int k = 0; k < n; k++) {
+                    numberOfOperations+=1;
+                }
+            }
+        }
+        endTime=System.currentTimeMillis();
 
+        System.out.println( "Triple Nested Loop Number of operations : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
         // Task 3 End...................
 // ......................................................................................................
-        // Task 4 N and M Nested Loops...................
+        // Task 4 N and M Nested Loops  O(n*m)...................
+        numberOfOperations=0;
+
+        startTime=System.currentTimeMillis();
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < m ; i++) {
+                numberOfOperations+=1;
+            }
+        }
+        endTime=System.currentTimeMillis();
+
+        System.out.println( "Nested Loop (n* m) Number of operations : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
         // Task 4 End...................
+
+        // Task 4.5 N and M Consecutive Loops O(n+m)...................
+        numberOfOperations=0;
+
+        startTime=System.currentTimeMillis();
+        for (int j = 0; j < n; j++) {
+            numberOfOperations+=1;
+        }
+        for (int i = 0; i < m ; i++) {
+            numberOfOperations+=1;
+        }
+        endTime=System.currentTimeMillis();
+
+        System.out.println( "Consecutive Loops O(n+m) Number of operations : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
+        // Task 4.5 End...................
 
         // Task 5 Logarithmic Complexity...................
         numberOfOperations=0;
@@ -43,7 +83,7 @@ public class BigOSingleLoop {
             numberOfOperations+=1;
         }
         endTime=System.currentTimeMillis();
-        System.out.println( "Number of operations with logarithmic  : "+numberOfOperations + " in "+ (endTime-startTime) +" miliseconds");
+        System.out.println( "Logarithmic Number of operations  : "+numberOfOperations + " in "+ (endTime-startTime) +" milliseconds");
        // Task 5 End...................*/
     }
 }
