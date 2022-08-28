@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class BigOSingleLoop {
     public static void main(String[] args) {
         long numberOfOperations=0;
-        int n=1000;// size of  Data
+        int n=100000;// size of  Data
         int m=500;
         long startTime;
         long endTime;
