@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Student {
     int id;
     String name;
@@ -31,13 +33,13 @@ public class Student {
         Student student = (Student) o;
 
         if (id != student.id) return false;
-        return name.equals(student.name);
+        return Objects.equals(name, student.name);
     }
 
-   @Override
+    @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + name.hashCode();
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
 
