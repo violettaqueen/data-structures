@@ -33,7 +33,6 @@ public class ArrayListReview {
             System.out.println(((ListIterator<Student>) iter).previous());
         }
 
-
         // 3. for each loop
         System.out.println("Printing with for_each loop..............");
         for (Student s:students) {
@@ -43,9 +42,11 @@ public class ArrayListReview {
         // 4. Lambda
         System.out.println("Printing with Lambda function loop..............");
         students.forEach(student-> System.out.println(student));
-        // Sorting Elements in List
+
+
+        // Sorting Elements in List using comparator interface
 
     }
-
+      //  implementations of  Comparator
 
 }
