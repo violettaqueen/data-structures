@@ -34,7 +34,7 @@ public class Student {
         return name.equals(student.name);
     }
 
-    @Override
+   @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + name.hashCode();
