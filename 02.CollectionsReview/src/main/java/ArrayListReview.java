@@ -29,20 +29,23 @@ public class ArrayListReview {
         // Backwards Iteration
         System.out.println("Printing Backwards with iterator..............");
 
-        while(((ListIterator<?>) iter).hasPrevious()){
-            System.out.println(((ListIterator<?>) iter).previous());
+        while(((ListIterator<Student>) iter).hasPrevious()){
+            System.out.println(((ListIterator<Student>) iter).previous());
         }
 
 
         // 3. for each loop
         System.out.println("Printing with for_each loop..............");
-        for (Student student:students) {
-            System.out.println(student);
+        for (Student s:students) {
+            System.out.println(s);
         }
 
         // 4. Lambda
-
+        System.out.println("Printing with Lambda function loop..............");
+        students.forEach(student-> System.out.println(student));
         // Sorting Elements in List
+
     }
+
 
 }
