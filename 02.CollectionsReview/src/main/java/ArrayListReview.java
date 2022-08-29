@@ -32,8 +32,13 @@ public class ArrayListReview {
         while(((ListIterator<?>) iter).hasPrevious()){
             System.out.println(((ListIterator<?>) iter).previous());
         }
-        // 3. for each loop
 
+
+        // 3. for each loop
+        System.out.println("Printing with for_each loop..............");
+        for (Student student:students) {
+            System.out.println(student);
+        }
 
         // 4. Lambda
 
