@@ -20,10 +20,18 @@ public class ArrayListReview {
         }
         // 2. Iterator
         // Forward Iteration
-
+        System.out.println("Printing with iterator..............");
+        Iterator iter= students.listIterator();
+        while(iter.hasNext()){
+            System.out.println(iter.next());
+        }
 
         // Backwards Iteration
+        System.out.println("Printing Backwards with iterator..............");
 
+        while(((ListIterator<?>) iter).hasPrevious()){
+            System.out.println(((ListIterator<?>) iter).previous());
+        }
         // 3. for each loop
 
 
