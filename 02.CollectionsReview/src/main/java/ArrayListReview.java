@@ -45,8 +45,28 @@ public class ArrayListReview {
 
 
         // Sorting Elements in List using comparator interface
+        System.out.println("Sorting with Comparator Interface by Id Desc......");
+        Collections.sort(students, new sortByIdDesc());
+        students.forEach(student-> System.out.println(student));
+
+        System.out.println("Sorting with Comparator Interface by Name Desc......");
+        Collections.sort(students, new sortByNameDesc());
+        students.forEach(student-> System.out.println(student));
 
     }
       //  implementations of  Comparator
+    static class sortByIdDesc implements Comparator<Student> {
 
+          @Override
+          public int compare(Student o1, Student o2) {
+              return o2.id-o1.id;
+          }
+      }
+    static class sortByNameDesc implements Comparator<Student> {
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.name.compareToIgnoreCase(o1.name);
+        }
+    }
 }
