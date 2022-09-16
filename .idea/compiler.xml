@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CollectionsReview" />
         <module name="04.LinkedLists" />
+        <module name="Data-Structures-Lab" />
       </profile>
     </annotationProcessing>
   </component>
